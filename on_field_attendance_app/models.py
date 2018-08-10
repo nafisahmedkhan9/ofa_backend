@@ -51,7 +51,7 @@ class Attendance(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE, null=True, blank=True)
     date = models.DateField(auto_now=False, auto_now_add=False, null=True, blank=True)
     def __str__(self):
-        return self.employee + ' ' + self.attendance
+        return str(self.employee) + ' ' + str(self.date) + ' ' + str(self.attendance)
 
 class Place(models.Model):
     city = models.CharField(max_length=255)

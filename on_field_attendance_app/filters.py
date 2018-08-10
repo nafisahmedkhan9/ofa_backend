@@ -9,6 +9,10 @@ class TaskFilters(django_filters.FilterSet):
 		model = Task
 		fields = {
 			"assignedTo" : ["exact"],
+			"title": ["exact"],
+            "comment": ["exact"],
+            "date": ["exact"],
+			"status": ["exact"],
 		}
 
 class AttendanceFilters(django_filters.FilterSet):
@@ -26,5 +30,12 @@ class EmployeeFilters(django_filters.FilterSet):
         model = Employee
         fields = {
 			"designation" : ["exact"],
-            "mobile_no" : ["exact"],
+			"username": ["exact"],
+            "first_name": ["exact"],
+            "last_name": ["exact"],
+            "city": ["exact"],
+            "state": ["exact"],
+            "mobile_no":["exact"],
+            "email": ["exact"],
+            "designation": ["exact"],
 		}
