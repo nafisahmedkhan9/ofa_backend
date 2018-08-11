@@ -22,7 +22,8 @@ class AttendanceSrializer(serializers.ModelSerializer):
                 "comment":obj.task.comment,
                 "date":obj.task.date,
                 "address":obj.task.address,
-                "location":obj.task.location
+                "location":obj.task.location,
+                "status":obj.task.status.status
             },
             "attendance":{
                 "pk": obj.attendance.pk, "status": obj.attendance.status
